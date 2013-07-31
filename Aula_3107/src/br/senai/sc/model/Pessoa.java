@@ -11,6 +11,13 @@ public class Pessoa {
     private String telefone;
     private String dataCadastro;
 
+    public Pessoa(int id, String endereco, String telefone, String dataCadastro) {
+        this.id = id;
+        this.endereco = endereco;
+        this.telefone = telefone;
+        this.dataCadastro = dataCadastro;
+    }
+       
     public int getId() {
         return id;
     }
