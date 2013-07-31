@@ -1,35 +1,36 @@
 package br.senai.sc.model;
 
-public class ClientePF extends PessoaFisica{
-    private double nrConta;
-    private double limiteCompra;
+public class ClientePJ extends PessoaJuridica {
+    
+    private double limite;
+    private int nrConta;
     private char categoria;
     private int qtVezesComprou;
     private double vlTotalGasto;
 
-    public ClientePF(double nrConta, double limiteCompra, char categoria, int qtVezesComprou, double vlTotalGasto, String cpf, String nome, String dataNascimento, String rg, int id, String endereco, String telefone, String dataCadastro) {
-        super(cpf, nome, dataNascimento, rg, id, endereco, telefone, dataCadastro);
+    public ClientePJ(double limite, int nrConta, char categoria, int qtVezesComprou, double vlTotalGasto, String cnpj, String razaoSocial, String nomeFantasia, int id, String endereco, String telefone, String dataCadastro) {
+        super(cnpj, razaoSocial, nomeFantasia, id, endereco, telefone, dataCadastro);
+        this.limite = limite;
         this.nrConta = nrConta;
-        this.limiteCompra = limiteCompra;
         this.categoria = categoria;
         this.qtVezesComprou = qtVezesComprou;
         this.vlTotalGasto = vlTotalGasto;
     }
 
-    public double getNrConta() {
+    public double getLimite() {
+        return limite;
+    }
+
+    public void setLimite(double limite) {
+        this.limite = limite;
+    }
+
+    public int getNrConta() {
         return nrConta;
     }
 
-    public void setNrConta(double nrConta) {
+    public void setNrConta(int nrConta) {
         this.nrConta = nrConta;
-    }
-
-    public double getLimiteCompra() {
-        return limiteCompra;
-    }
-
-    public void setLimiteCompra(double limiteCompra) {
-        this.limiteCompra = limiteCompra;
     }
 
     public char getCategoria() {
@@ -55,5 +56,5 @@ public class ClientePF extends PessoaFisica{
     public void setVlTotalGasto(double vlTotalGasto) {
         this.vlTotalGasto = vlTotalGasto;
     }
-    
+            
 }
