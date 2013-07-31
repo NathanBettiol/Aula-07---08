@@ -1,4 +1,4 @@
-package br.senai.sc.model;
+package br.senai.sc.model.negocio;
 
 /**
  * Essa classe representa as pessoas do software

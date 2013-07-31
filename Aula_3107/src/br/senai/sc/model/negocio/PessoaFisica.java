@@ -1,4 +1,4 @@
-package br.senai.sc.model;
+package br.senai.sc.model.negocio;
 
 public class PessoaFisica extends Pessoa{
     private String cpf;

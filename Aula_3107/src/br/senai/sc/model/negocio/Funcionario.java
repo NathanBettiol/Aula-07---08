@@ -1,4 +1,4 @@
-package br.senai.sc.model;
+package br.senai.sc.model.negocio;
 
 public class Funcionario {
     private double salario;

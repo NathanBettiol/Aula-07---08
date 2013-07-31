@@ -1,4 +1,4 @@
-package br.senai.sc.model;
+package br.senai.sc.model.negocio;
 
 public class PessoaJuridica extends Pessoa {
     private String cnpj;
