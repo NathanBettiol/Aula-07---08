@@ -2,14 +2,20 @@ package br.senai.sc.model.negocio;
 
 /**
  * Essa classe representa as pessoas do software
+ *
  * @version 1.0 31/07/13
  * @author gustavo_agustinho
  */
 public class Pessoa {
+
     private int id;
     private String endereco;
     private String telefone;
     private String dataCadastro;
+
+    public Pessoa() {
+        
+    }
 
     public Pessoa(int id, String endereco, String telefone, String dataCadastro) {
         this.id = id;
@@ -17,7 +23,7 @@ public class Pessoa {
         this.telefone = telefone;
         this.dataCadastro = dataCadastro;
     }
-       
+
     public int getId() {
         return id;
     }
@@ -49,5 +55,4 @@ public class Pessoa {
     public void setDataCadastro(String dataCadastro) {
         this.dataCadastro = dataCadastro;
     }
-    
 }
