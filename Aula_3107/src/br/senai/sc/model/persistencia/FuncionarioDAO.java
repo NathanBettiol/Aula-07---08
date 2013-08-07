@@ -13,7 +13,7 @@ public class FuncionarioDAO {
         funcionarios.add(f);
     }
 
-    public void listarFuncionario() {
+    public void listarFuncionario(List<Funcionario> funcionarios) {
         String msg = "";
         for (Funcionario f : funcionarios) {
             msg = msg + "Nome: " + f.getNome() + "\nData de Nascimento: " + f.getDataNascimento()
@@ -23,14 +23,29 @@ public class FuncionarioDAO {
         }
         JOptionPane.showMessageDialog(null, msg);
     }
-    
+
     public void excluirFuncionario(String nome, List<Funcionario> funcionarios) {
         Funcionario fRemove = null;
-        for(Funcionario f : funcionarios){
-            if(f.getNome().equals(nome)){
+        for (Funcionario f : funcionarios) {
+            if (f.getNome().equals(nome)) {
                 fRemove = f;
             }
         }
         funcionarios.remove(fRemove);
+    }
+
+    public Funcionario buscaFuncionarioByNome(String nome, List<Funcionario> funcionarios) {
+        for (Funcionario fBusca : funcionarios) {
+            if (fBusca.getNome().equals(nome)) {
+                return fBusca;
+            }
+        }
+        return null;
+    }
+
+    public void alterarFuncionario(String nome, List<Funcionario> funcionarios, Funcionario fAltera) {
+        
+        excluirFuncionario(nome, funcionarios);
+        addFuncionario(fAltera, funcionarios);
     }
 }
